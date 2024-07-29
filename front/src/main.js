@@ -13,6 +13,7 @@ import App from './App.vue'
 // Composables
 import { createApp } from 'vue'
 import 'unfonts.css'
+import './styles/custom.css'
 
 const app = createApp(App)
 
