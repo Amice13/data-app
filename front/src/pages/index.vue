@@ -1,18 +1,9 @@
 <template>
   <div style="height: vh100;" class="d-flex align-center hero-unit">
     <div>
-      <div class="tabs d-flex">
-        <div class="tab">
-          Послуги
-        </div>
-        <div class="tab">
-          Відомості про мене
-        </div>
-      </div>
+      <d-tabs v-model="tab" :items="['Hello', 'World']" />
       <div>Hello</div>
     </div>
-    <d-alert>Hello</d-alert>
-    <d-btn animated>Увійти</d-btn>
   </div>
 </template>
 
@@ -44,6 +35,12 @@
 
 </style>
 
-<script setup>
-  //
+<script>
+export default {
+  data () {
+    return {
+      tab: undefined
+    }
+  }
+}
 </script>
