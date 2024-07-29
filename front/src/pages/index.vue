@@ -1,22 +1,22 @@
 <template>
   <div style="height: vh100;" class="d-flex align-center hero-unit">
-    <div class="diia-alert">Text</div>
+    <div>
+      <div class="tabs d-flex">
+        <div class="tab">
+          Послуги
+        </div>
+        <div class="tab">
+          Відомості про мене
+        </div>
+      </div>
+      <div>Hello</div>
+    </div>
+    <d-alert>Hello</d-alert>
     <d-btn animated>Увійти</d-btn>
   </div>
 </template>
 
 <style>
-
-.diia-alert {
-  background: #fff7e3;
-  display: flex;
-  padding: 24px 32px;
-  color: #000;
-  border-image-slice: 1;
-  border-style: solid;
-  border-width: 2px;
-  border-image-source: linear-gradient(0deg, #2833d0 .01%, #7179ef 17.19%, #bf98c6 48.44%, #f1acac);
-}
 
 .border-color {
   display: flex;
@@ -34,6 +34,7 @@
   border-image: linear-gradient(90deg,#c3aab2 0,#9ec 57.66%,#80c0c8 76.7%,#4b8bfa 100%);
   border-image-slice: 1
 }
+
 .hero-unit {
   display: flex;
   justify-content: center;
