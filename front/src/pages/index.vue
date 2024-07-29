@@ -1,7 +1,12 @@
 <template>
   <div style="height: vh100;" class="d-flex align-center hero-unit">
     <div>
-      <d-tabs v-model="tab" :items="['Hello', 'World']" />
+      <d-tabs
+        v-model="tab"
+        secondary
+        :items="['Hello', 'World']"
+        :counts="[0, 2]"
+      />
       <div>Hello</div>
     </div>
   </div>
