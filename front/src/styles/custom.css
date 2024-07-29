@@ -90,3 +90,16 @@
   opacity: 0 !important;
 }
 
+/* TABLE */
+
+.d-table * {
+  font-family: eUkraine;
+}
+.d-table th {
+  background: #E7EEF3;
+}
+
+.d-table, th, td {
+  border: 1px solid #E7EEF3;
+  border-collapse: collapse;
+}
