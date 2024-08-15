@@ -1,0 +1,63 @@
+{
+  "name": "warsearch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.13.1",
+    "@levminer/speakeasy": "^1.4.2",
+    "@loskir/styled-qr-code-node": "^1.5.1",
+    "autocannon": "^7.15.0",
+    "axios": "^1.6.8",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "csv-parse": "^5.5.5",
+    "deep-equal": "^2.2.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-fileupload": "^1.5.0",
+    "express-rate-limit": "^7.2.0",
+    "fast-xml-parser": "^4.3.6",
+    "generate-password": "^1.7.1",
+    "googleapis": "^137.1.0",
+    "he": "^1.2.0",
+    "helmet": "^7.1.0",
+    "iconv-lite": "^0.6.3",
+    "joi": "^17.12.3",
+    "JSONStream": "^1.3.5",
+    "jsonwebtoken": "^9.0.2",
+    "jwks-rsa": "^3.1.0",
+    "kafkajs": "^2.2.4",
+    "mocha": "^10.4.0",
+    "module-alias": "^2.2.3",
+    "mongoose": "^8.3.0",
+    "morgan": "^1.10.0",
+    "node-cache": "^5.1.2",
+    "node-stream-zip": "^1.15.0",
+    "nodemailer": "^6.9.13",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "response-time": "^2.3.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
+    "uuid": "^10.0.0",
+    "winston": "^3.13.0",
+    "workerpool": "^9.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

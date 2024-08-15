@@ -1,0 +1,61 @@
+{
+  "index.mapping.total_fields.limit": 20,
+  "index.mapping.nested_fields.limit": 3,
+  "index.mapping.ignore_malformed": true,
+  "index": {
+    "number_of_shards": 6,
+    "analysis": {
+      "analyzer": {
+        "abbreviated_address": {
+          "tokenizer": "whitespace",
+          "char_filter": ["eCharFilter"],
+          "filter": [
+            "lowercase",
+            "abbreviation_synonym",
+            "russian_morphology"
+          ]
+        },
+        "stemmed_address": {
+          "tokenizer": "standard",
+          "char_filter": ["eCharFilter"],
+          "filter": [
+            "lowercase",
+            "abbreviation_synonym",
+            "russian_stemmer"
+          ]
+        },
+        "house_number": {
+          "tokenizer": "keyword",
+          "char_filter": ["houseNumber"],
+          "filter": [
+            "lowercase"
+          ]
+        }
+      },
+      "char_filter": {
+        "eCharFilter": {
+          "type": "mapping",
+          "mappings": [
+            "Ё=>Е",
+            "ё=>е"
+          ]
+        },
+        "houseNumber": {
+          "type": "pattern_replace",
+          "pattern": "\\D|[^А-яёЁ]",
+          "replacement": ""
+        }
+      },
+      "filter": {
+        "russian_stemmer": {
+          "type":       "stemmer",
+          "language":   "russian"
+        },
+        "abbreviation_synonym": {
+          "type": "synonym_graph",
+          "synonyms_path": "analyzer/rus-abbreviations.txt"
+        }
+      }
+    }
+  }
+}

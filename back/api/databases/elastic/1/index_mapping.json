@@ -1,0 +1,48 @@
+{
+  "dynamic": false,
+  "properties": {
+    "fullAddress": {
+      "type": "text"
+    },
+    "osm_id": { "type": "keyword" },
+    "coordinate": { "type": "geo_point" },
+    "importance": { "type": "float" },
+    "postcode": {
+      "type": "keyword",
+      "copy_to": ["fullAddress"]
+    },
+    "type": { "type": "keyword", "index": false },
+    "osm_key": { "type": "keyword" },
+    "osm_type": { "type": "keyword", "index": false },
+    "osm_value": { "type": "keyword" },
+    "housenumber": {
+      "type": "text",
+      "analyzer": "house_number",
+      "search_analyzer": "house_number",
+      "copy_to": ["fullAddress"]
+    },
+    "name": {
+      "type": "text",
+      "analyzer": "abbreviated_address",
+      "copy_to": ["fullAddress"],
+      "fields": {
+        "stemmed": {
+          "type": "text",
+          "analyzer": "stemmed_address"
+        }
+      }
+    },
+    "state": {
+      "type": "text",
+      "analyzer": "abbreviated_address",
+      "search_analyzer": "house_number",
+      "copy_to": ["fullAddress"]
+    },
+    "city": {
+      "type": "text",
+      "analyzer": "abbreviated_address",
+      "search_analyzer": "house_number",
+      "copy_to": ["fullAddress"]
+    }
+  }
+}
