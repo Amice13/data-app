@@ -1,6 +1,6 @@
 <template>
   <div class="d-block-link">
-    <a :href="href" target="_blank" rel="nofollow" class="d-block-link-service">
+    <a @click="$router.push(href)" target="_blank" rel="nofollow" class="d-block-link-service">
       <slot></slot>
     </a>
   </div>

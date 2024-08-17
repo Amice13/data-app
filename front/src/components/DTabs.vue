@@ -1,5 +1,5 @@
 <template>
-  <div style="height: vh100;" class="d-flex align-center hero-unit">
+  <div style="height: vh100;" class="d-flex align-center">
     <div>
       <div class="d-tabs d-flex align-center" :class="{ secondary }">
         <div
@@ -21,9 +21,13 @@
   padding: 6px 0px;
   margin: 2px 16px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   color: #666;
   cursor: pointer;
+}
+
+.d-tabs .tab:first-child {
+  margin: 2px 16px 2px 0px;
 }
 
 .d-tabs .tab.active {

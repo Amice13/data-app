@@ -1,5 +1,11 @@
 <template>
-  <div class="diia-alert">
+  <div
+    class="diia-alert"
+    :class="{
+      'pt-10 pb-10 pl-8 pr-8': density === 'normal',
+      'pt-6 pb-6 pl-4 pr-4': density === 'comfort',
+    }"
+  >
     <div v-show="showIcon" class="flex-shrink-0 flex-grow-0 mr-4">
       <img :src="`${assets}/emoji/${icon}`" />
     </div>
@@ -29,6 +35,10 @@ export default {
   props: {
     showIcon: {
       type: Boolean
+    },
+    density: {
+      type: String,
+      default: 'compact'
     },
     icon: {
       type: String,
